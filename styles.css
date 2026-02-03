@@ -117,9 +117,25 @@ body {
 .bar {
     width: 25px;
     height: 3px;
-    background-color: #000000;
+    background-color: var(--off-white);
     margin: 3px 0;
     transition: 0.3s;
+}
+
+.header.scrolled .bar {
+    background-color: var(--charcoal-black);
+}
+
+.nav-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.nav-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* Hero Section */
@@ -794,6 +810,12 @@ section {
 
     .nav-menu.active {
         left: 0;
+    }
+
+    .nav-menu a {
+        color: var(--charcoal-black) !important;
+        font-size: 18px;
+        padding: 10px 0;
     }
 
     .nav-toggle {
