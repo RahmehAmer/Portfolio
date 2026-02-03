@@ -460,7 +460,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, transparent 50%);
+    background: transparent;
     pointer-events: none;
     z-index: 4;
 }
@@ -617,7 +617,17 @@ section {
     border: 1px solid var(--pistachio-green);
     text-align: center;
     position: relative;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
     overflow: hidden;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--pistachio-green);
+    background: linear-gradient(135deg, #e0e0e0 0%, #c8c8c8 50%, #e0e0e0 100%);
 }
 
 .education-card::before {
@@ -645,6 +655,16 @@ section {
     text-align: center;
     position: relative;
     overflow: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--pistachio-green);
+    background: linear-gradient(135deg, #e0e0e0 0%, #c8c8c8 50%, #e0e0e0 100%);
 }
 
 .certificate-card::before {

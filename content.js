@@ -27,6 +27,7 @@ const portfolioContent = {
         title: "CREATIVE DEVELOPER",
         name: "Rahmeh Jihad",
         description: "I'm a Front-End Developer based in Amman, Jordan.",
+        image: "assets/profileimage.jpg",
         ctaButton: {
             text: "Get In Touch",
             href: "https://wa.me/00962796421391"
@@ -41,7 +42,7 @@ const portfolioContent = {
 
     // Skills Section
     skills: {
-        title: "SKILLS",
+        title: "MY SKILLS",
         items: [
             {
                 name: "Front-end Development",
@@ -49,20 +50,21 @@ const portfolioContent = {
             },
             {
                 name: "APIs integration & Google Apps Script",
-                image: "https://images.unsplash.com/photo-1558494949-ef010cbcc31c?w=800&h=600&fit=crop"
+                image: "https://miro.medium.com/v2/1*s1-IfYUTB2_yTFBs3DwnPQ.png"
             },
             {
                 name: "Responsive UI/UX design",
-                image: "https://images.unsplash.com/photo-1559028006-848e65e91089?w=800&h=600&fit=crop"
+                image: "https://www.trignodev.com/wp-content/themes/trignodev1/assets/images/services-img/ui-ux.jpg"
             },
             {
                 name: "Sales funnels & Landing pages",
-                image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+                image: "https://blog.magezon.com/wp-content/uploads/2022/07/types-of-landing-pages.jpg"
             },
             {
                 name: "Portfolio websites",
-                image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop"
+                image: "https://images01.nicepagecdn.com/page/22/06/website-design-preview-220636.jpg"
             }
+    
         ]
     },
 

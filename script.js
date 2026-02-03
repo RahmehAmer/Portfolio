@@ -47,6 +47,27 @@ function loadPortfolioContent() {
         heroCta.href = portfolioContent.hero.ctaButton.href;
     }
 
+    // Load hero image
+    const heroImageContainer = document.querySelector('.hero-image');
+    if (heroImageContainer && portfolioContent.hero.image) {
+        // Clear any existing content completely
+        heroImageContainer.innerHTML = '';
+        
+        // Create and add only the profile image
+        const img = document.createElement('img');
+        img.src = portfolioContent.hero.image;
+        img.alt = portfolioContent.hero.name;
+        img.style.cssText = 'width: 450px; height: 450px; object-fit: cover; border-radius: 50%; display: block; margin-top: 30px;';
+        
+        // Add error handling
+        img.onerror = function() {
+            heroImageContainer.innerHTML = '<div class="image-placeholder" style="width: 450px; height: 450px; display: flex; align-items: center; justify-content: center; background: #f0f0f0; border-radius: 50%; color: #666; margin-top: 30px;">Profile Image</div>';
+        };
+        
+        // Add the image to container
+        heroImageContainer.appendChild(img);
+    }
+
     // Load about content
     const aboutTitle = document.getElementById('about-title');
     const aboutText = document.getElementById('about-text');
