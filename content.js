@@ -72,28 +72,28 @@ const portfolioContent = {
         subtitle: "Some opportunities and projects that I'm proud of!",
         items: [
             {
-                title: "Project 1",
-                description: "Amazing project description coming soon",
-                image: "placeholder1.jpg",
-                link: "#"
+                title: "Style Your Winter",
+                description: "Elegant e-commerce landing page showcasing stylish women's winter jackets with modern design and smooth user experience",
+                image: "assets/Project1 .png",
+                link: "https://rahmehamer.github.io/Style-your-winter/"
             },
             {
-                title: "Project 2", 
-                description: "Amazing project description coming soon",
-                image: "placeholder2.jpg",
-                link: "#"
+                title: "Build Your Personal Brand from ZERO - in 5 Hours",
+                description: "Learn how to stand out online and attract opportunities even if you are just starting!",
+                image: "assets/Project2.png",
+                link: "https://rahmehamer.github.io/Event_Funnel/index.html"
             },
             {
-                title: "Project 3",
-                description: "Amazing project description coming soon", 
-                image: "placeholder3.jpg",
-                link: "#"
+                title: "Halaweh Restaurant",
+                description: "Warm Winter Experience at Halaweh Restaurant",
+                image: "assets/Project3.png",
+                link: "https://rahmehamer.github.io/Halaweh-Event/"
             },
             {
-                title: "Project 4",
-                description: "Amazing project description coming soon",
-                image: "placeholder4.jpg", 
-                link: "#"
+                title: "SAMA Restaurant",
+                description: "From our grill to your door",
+                image: "assets/Project4.png",
+                link: "https://rahmehamer.github.io/Restaurant-system/"
             }
         ]
     },

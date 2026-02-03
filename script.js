@@ -89,15 +89,16 @@ function loadPortfolioContent() {
     }
     if (projectsGrid && portfolioContent.projects.items) {
         projectsGrid.innerHTML = portfolioContent.projects.items.map(project => `
-            <div class="project-card">
+            <a href="${project.link}" class="project-card" target="_blank">
                 <div class="project-image">
-                    <div class="image-placeholder">${project.title} Image</div>
+                    <img src="${project.image}" alt="${project.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="image-placeholder" style="display:none;">${project.title} Image</div>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">${project.title}</h3>
                     <p class="project-description">${project.description}</p>
                 </div>
-            </div>
+            </a>
         `).join('');
     }
 
