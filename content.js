@@ -63,7 +63,7 @@ const portfolioContent = {
             },
             {
                 name: "Sales funnels & Landing pages",
-                image: "https://blog.magezon.com/wp-content/uploads/2022/07/types-of-landing-pages.jpg"
+                image: "https://cdn.prod.website-files.com/633c0bd02ac16137219578f4/633d49c2e9f8ae4f9f5f7022_growmodo-blog-sales-funnel-templates-image-02.jpeg"
             },
             {
                 name: "Portfolio websites",
