@@ -97,6 +97,37 @@ function loadPortfolioContent() {
         initSkillsScroll();
     }
 
+    // Load experience content
+    const experienceTitle = document.getElementById('experience-title');
+    const experienceSubtitle = document.getElementById('experience-subtitle');
+    const experienceTimeline = document.getElementById('experience-timeline');
+
+    if (experienceTitle && portfolioContent.experience) {
+        experienceTitle.textContent = portfolioContent.experience.title;
+    }
+    if (experienceSubtitle && portfolioContent.experience) {
+        experienceSubtitle.textContent = portfolioContent.experience.subtitle;
+    }
+    if (experienceTimeline && portfolioContent.experience.items) {
+        // Reverse the array to show most recent experience first (6 to 1)
+        const reversedExperiences = [...portfolioContent.experience.items].reverse();
+        experienceTimeline.innerHTML = reversedExperiences.map((exp, index) => `
+            <div class="experience-item" data-experience-index="${index}">
+                <div class="experience-content">
+                    <h3 class="experience-title">${exp.title}</h3>
+                    <h4 class="experience-company">${exp.company}</h4>
+                    <p class="experience-location">${exp.location} <span class="experience-date">${exp.startDate} - ${exp.endDate}</span></p>
+                    <p class="experience-description">${exp.description}</p>
+                    ${exp.achievements ? `
+                        <ul class="experience-achievements">
+                            ${exp.achievements.map(achievement => `<li>${achievement}</li>`).join('')}
+                        </ul>
+                    ` : ''}
+                </div>
+            </div>
+        `).join('');
+    }
+
     // Load projects content
     const projectsTitle = document.getElementById('projects-title');
     const projectsSubtitle = document.getElementById('projects-subtitle');
@@ -557,8 +588,23 @@ function updateSkillImage(imageUrl) {
 // Initialize scroll-triggered animations
 function initScrollAnimations() {
     const contactSection = document.querySelector('.contact');
+    const experienceItems = document.querySelectorAll('.experience-item');
     const header = document.querySelector('.header');
     let lastScrollY = window.scrollY;
+    
+    // Observe experience items
+    experienceItems.forEach(item => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        observer.observe(item);
+    });
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
